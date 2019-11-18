@@ -71,14 +71,12 @@ header>h2:hover{
 }
 .main-section{
   display: flex;
-  /* border: 2px solid orangered; */
   height: 100vh;
   justify-content: center;
   align-items: center;
   font-size: 3.7em;
 }
 aside.stats{
-  /* border: 1px solid black; */
   height: 90vh;
   width: 30%;
   margin-right: 5%;
@@ -100,7 +98,6 @@ aside .stats-box{
   text-align: center;
 }
 main{
-  /* border: 1px solid blueviolet; */
   height: 90vh;
   width: 100vh;
   display: flex;
