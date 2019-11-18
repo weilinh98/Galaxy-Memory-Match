@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <title>Memory Match Skeleton</title>
+</head>
+
+<body>
+  <div class="background">
+    <div class="welcome-page">
+    <video autoplay muted loop id="backgroundVideo">
+      <source src="./assets/stars/star_burst.mp4" type="video/mp4">
+    </video>
+    <input type="image" id="start-game-button" alt="start" src="/assets/stars/start_button.png">
+    <div class="difficulty-select">
+      <h1>Galaxy Planets Match</h1>
+      <h2>Select Diffiulty:</h2>
+      <span id="easy-button">easy</span>
+      <span id="medium-button">medium</span>
+      <span id="hard-button">hard</span>
+    </div>
+    </div>
+  </div>
+  <div class="body-container">
+  <header>
+    <h1>Galaxy Planets Match</h1>
+    <h2>Main Menu</h2>
+  </header>
+  <section class="main-section">
+    <aside class="stats">
+      <div>Game Status</div>
+      <div class="stats-box">Games Played</div>
+      <div class="stats-box">0</div>
+      <div class="stats-box">Attempts</div>
+      <div class="stats-box">0</div>
+      <div class="stats-box">Accuracy</div>
+      <div class="stats-box">0%</div>
+    </aside>
+    <main>
+      <div class="cards-container">
+        <!-- <div class="cards">
+          <div class="front saturn"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front mercury"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front mercury"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front asteroid"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front moon"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front sun"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front neptune"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front uranus"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front pluto"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front venus"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front sun"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front saturn"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front uranus"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front pluto"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front venus"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front moon"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front asteroid"></div>
+          <div class="back"></div>
+        </div>
+        <div class="cards">
+          <div class="front neptune"></div>
+          <div class="back"></div>
+        </div> -->
+      </div>
+    </main>
+  </section>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Congratulations! You've won! You are the smartest genius in the galaxy</p>
+      <button class="playAgain">Play Again</button>
+
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
