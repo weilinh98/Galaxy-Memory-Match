@@ -11,18 +11,17 @@ var games_played = 0;
 var x;
 
 function initializeApp() {
-  $('#start-game-button').on('click', () => {$('.body-container').show(); $('#start-game-button').hide(); $('.difficulty-select').hide()});
   $('#easy-button').on('click', () => {shuffleCards("easy"); $('#start-game-button').show();});
   $('#medium-button').on('click', () => {shuffleCards("medium"); $('#start-game-button').show();});
   $('#hard-button').on('click', () => {shuffleCards("hard");$('#start-game-button').show();});
+  $("#start-game-button").on("click", () => {$(".body-container").show();$(".welcome-page").hide();});
   $('body').on('click','.back', handleCardClick);
-  $('header>h2').on('click', () => {$('.body-container').hide();$('.difficulty-select').show(); resetGame()});
+  $('#main-menu-button').on('click', () => {$('.body-container').hide();$('.welcome-page').show(); resetGame()});
   $('.close').on('click', () => { $('.modal').hide()});
   $('.playAgain').on('click', () => { $('.modal').hide(); resetGame()});
 }
 
 function handleCardClick(event) {
-  debugger;
   if (firstCardClicked !== null && secondCardClicked !== null) {
     return;
   }
@@ -143,35 +142,3 @@ function shuffleCards(difficulty) {
       break;
   }
 }
-
-// function shuffleArray(array){
-//   for(i = 0; i < arraylength; i++){
-//     var random = Math.floor(Math.random()*arraylength);
-//     var currentItem = array[i];
-//     var newItem = array[random];
-//     currentItem = newItem;
-//     }
-//   }
-
-
-
-
-// var firstCard = null;
-// var secondCard = null;
-// function waitFlip(event){
-//   debugger;
-//   if (!firstCardClicked) {
-//     firstCard = $(event.currentTarget);
-//   }
-//   else {
-//     secondCard = $(event.currentTarget);
-//   }
-//   function flipOneCard(){
-//     if(firstCard && !secondCard){
-//       firstCard.addClass('hidden');
-//     }
-//     firstCard = null;
-//     secondCard = null;
-//   }
-//   setInterval(flipOneCard, 1500);
-// }

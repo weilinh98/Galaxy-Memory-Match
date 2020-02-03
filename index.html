@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="background">
+  <div class="main">
     <video autoplay muted loop id="backgroundVideo">
       <source src="./assets/stars/starburst.mov" type="video/mp4">
     </video>
@@ -24,38 +24,34 @@
       <span id="medium-button">medium</span>
       <span id="hard-button">hard</span>
       </div>
-      <div class="start-game-button-container" >
-        <div id="start-game-button">START GAME</div>
-      </div>
     </div>
+      <div id="start-game-button">START GAME</div>
     </div>
+    <div class="body-container">
+      <header>
+        <h1>Galaxy Memory Match</h1>
+        <h2 id="main-menu-button">Main Menu</h2>
+      </header>
 
+      <section class="main-section">
+        <aside class="stats">
+          <div>Game Status</div>
+          <div class="stats-box">Games Played</div>
+          <div class="stats-box">0</div>
+          <div class="stats-box">Attempts</div>
+          <div class="stats-box">0</div>
+          <div class="stats-box">Accuracy</div>
+          <div class="stats-box">0%</div>
+        </aside>
+
+        <main>
+          <div class="cards-container">
+          </div>
+        </main>
+
+
+      </section>
   </div>
-
-  <div class="body-container">
-  <header>
-    <h1>Galaxy Memory Match</h1>
-    <h2 id="main-menu-button">Main Menu</h2>
-  </header>
-
-  <section class="main-section">
-    <aside class="stats">
-      <div>Game Status</div>
-      <div class="stats-box">Games Played</div>
-      <div class="stats-box">0</div>
-      <div class="stats-box">Attempts</div>
-      <div class="stats-box">0</div>
-      <div class="stats-box">Accuracy</div>
-      <div class="stats-box">0%</div>
-    </aside>
-
-    <main>
-      <div class="cards-container">
-      </div>
-    </main>
-
-
-  </section>
 
   <div id="myModal" class="modal">
     <div class="modal-content">

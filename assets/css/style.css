@@ -13,19 +13,19 @@ body{
   height: 100%;
   width: 100%;
 }
-.start-game-button-container{
+#start-game-button{
   display: none;
   width: 100%;
-  display: flex;
-  justify-content: center;
-
+  text-align: center;
+  font-size: 2em;
+  color: white;
 }
 .body-container{
   font-size: 1rem;
   color: white;
   display: none;
 }
-div.background{
+.main{
   height: 100vw;
   position: relative;
   width: 100%;
@@ -91,7 +91,7 @@ header>h2:hover{
   display: flex;
   align-items: center;
   color: white;
-  height: 15%;
+  height: 30%;
 }
 .main-section{
   display: flex;
