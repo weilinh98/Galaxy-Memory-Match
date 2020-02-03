@@ -14,24 +14,30 @@
     <video autoplay muted loop id="backgroundVideo">
       <source src="./assets/stars/starburst.mov" type="video/mp4">
     </video>
+
     <div class="welcome-page">
-    <input type="image" id="start-game-button" alt="start" src="/assets/stars/start_button.png">
+    <div class="welcome-title">Galaxy Memory Match</div>
     <div class="difficulty-select">
-      <h1>Galaxy Planets Match</h1>
-      <h2>Select Diffiulty:</h2>
+      <div class="difficulty-title">Select Diffiulty:</div>
       <div class="difficulty-level">
       <span id="easy-button">easy</span>
       <span id="medium-button">medium</span>
       <span id="hard-button">hard</span>
       </div>
+      <div class="start-game-button-container" >
+        <div id="start-game-button">START GAME</div>
+      </div>
     </div>
     </div>
+
   </div>
+
   <div class="body-container">
   <header>
-    <h1>Galaxy Planets Match</h1>
-    <h2>Main Menu</h2>
+    <h1>Galaxy Memory Match</h1>
+    <h2 id="main-menu-button">Main Menu</h2>
   </header>
+
   <section class="main-section">
     <aside class="stats">
       <div>Game Status</div>
@@ -42,83 +48,15 @@
       <div class="stats-box">Accuracy</div>
       <div class="stats-box">0%</div>
     </aside>
+
     <main>
       <div class="cards-container">
-        <!-- <div class="cards">
-          <div class="front saturn"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front mercury"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front mercury"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front asteroid"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front moon"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front sun"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front neptune"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front uranus"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front pluto"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front venus"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front sun"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front saturn"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front uranus"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front pluto"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front venus"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front moon"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front asteroid"></div>
-          <div class="back"></div>
-        </div>
-        <div class="cards">
-          <div class="front neptune"></div>
-          <div class="back"></div>
-        </div> -->
       </div>
     </main>
+
+
   </section>
+
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>

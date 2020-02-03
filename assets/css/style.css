@@ -1,8 +1,3 @@
-/* @media only screen and (min-width: 600px) {
-  body {
-    height: 100vh;
-  }
-} */
 body{
   margin: 0;
   font-family: 'Press Start 2P', cursive;
@@ -14,28 +9,30 @@ body{
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
-#start-game-button{
-  position: absolute;
+.start-game-button-container{
   display: none;
-  transform: translate(35vw, 40vh);
-}
-#start-game-button:focus{
-  outline: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
 }
 .body-container{
   font-size: 1rem;
   color: white;
   display: none;
-  /* margin: 1px; */
-  /* overflow: hidden; */
 }
 div.background{
+  height: 100vw;
   position: relative;
+  width: 100%;
 }
 #backgroundVideo{
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
@@ -44,10 +41,19 @@ header{
   height: 20%;
   text-align: center;
 }
-h1{
-  /* border: 1px solid bisque; */
+.welcome-title{
   text-align: center;
   font-size: 2em;
+  color: white;
+  height: 10%;
+  margin-top: 6%;
+}
+
+.difficulty-title{
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  width: 100%;
 }
 header>h2{
   border: 1px solid white;
@@ -61,26 +67,31 @@ header>h2:hover{
   border: 2px solid white;
   cursor: pointer;
 }
+
+.difficulty-level{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .difficulty-level>span{
   cursor: pointer;
   border: 1px solid white;
-  margin: 5px;
-  padding: 5px;
+  margin: 5%;
+  padding: 3%;
   border-radius: 5px;
-  box-shadow: 3px 3px white;
+  box-shadow: 6px 6px white;
 }
 .difficulty-level>span:hover{
-  box-shadow: 5px 5px white;
+  box-shadow: 7px 7px white;
 }
 .difficulty-select{
-  display: inline-block;
   flex-wrap: wrap;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: 'Press Start 2P', cursive;
   color: white;
-  cursor: pointer;
+  height: 15%;
 }
 .main-section{
   display: flex;
@@ -178,7 +189,7 @@ position: relative;
 .back{
   height: 100%;
   width: 100%;
-  background-image: url("../images/card-back.jpg");
+  background-image: url("/assets/stars/card-back.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,4 +226,8 @@ position: relative;
 .close:focus{
   color: aqua;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1017px){
+
 }
