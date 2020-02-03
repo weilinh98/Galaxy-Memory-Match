@@ -6,9 +6,14 @@
 body{
   margin: 0;
   font-family: 'Press Start 2P', cursive;
+  display: flex;
+  height: 100vh;
+
 }
 .welcome-page{
   position: relative;
+  display: flex;
+  align-items: center;
 }
 #start-game-button{
   position: absolute;
@@ -31,19 +36,23 @@ div.background{
 #backgroundVideo{
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
-header, h1{
+header{
+  height: 20%;
+  text-align: center;
+}
+h1{
   /* border: 1px solid bisque; */
   text-align: center;
-  margin-bottom: 2vh;
+  font-size: 2em;
 }
 header>h2{
   border: 1px solid white;
   padding: 10px;
-  font-size: 15px;
+  font-size: 1em;
   border-radius: 5px;
   display: inline;
 }
@@ -52,7 +61,7 @@ header>h2:hover{
   border: 2px solid white;
   cursor: pointer;
 }
-.difficulty-select>span{
+.difficulty-level>span{
   cursor: pointer;
   border: 1px solid white;
   margin: 5px;
@@ -60,26 +69,30 @@ header>h2:hover{
   border-radius: 5px;
   box-shadow: 3px 3px white;
 }
-.difficulty-select>span:hover{
+.difficulty-level>span:hover{
   box-shadow: 5px 5px white;
 }
 .difficulty-select{
   display: inline-block;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Press Start 2P', cursive;
   color: white;
   cursor: pointer;
 }
 .main-section{
   display: flex;
-  height: 100vh;
+  height: 77%;
   justify-content: center;
   align-items: center;
   font-size: 3.7em;
 }
 aside.stats{
-  height: 90vh;
+  height: 80%;
   width: 30%;
-  margin-right: 5%;
+  margin: 3%;
   font-size: 25%;
   text-align: center;
   display: flex;
@@ -98,7 +111,7 @@ aside .stats-box{
   text-align: center;
 }
 main{
-  height: 90vh;
+  height: 90%;
   width: 100vh;
   display: flex;
   justify-content: center;

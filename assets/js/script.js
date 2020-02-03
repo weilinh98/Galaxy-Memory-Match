@@ -22,12 +22,14 @@ function initializeApp() {
 }
 
 function handleCardClick(event) {
+  debugger;
   if (firstCardClicked !== null && secondCardClicked !== null) {
     return;
   }
 
   if (!firstCardClicked) {
     firstCardClicked = $(event.currentTarget);
+    console.log($(event.currentTarget).attr('class').split('')[3])
     firstCardClicked.addClass("hidden");
   }
   else {
@@ -77,7 +79,7 @@ function calculateAccuracy() {
 function displayStats() {
   calculateAccuracy();
   $('.stats-box:nth-child(5)').text(attempt);//attempt display
-  $('.stats-box:nth-child(7)').text(accuracy + "%");//accuracy display
+  $('.stats-box:nth-child(7)').text(`${accuracy}%`);//accuracy display
   $('.stats-box:nth-child(3)').text(games_played);//games_played display
 }
 
