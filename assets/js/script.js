@@ -16,8 +16,7 @@ function initializeApp() {
   $('#hard-button').on('click', () => {shuffleCards("hard"); $(".difficulty-select").hide();$('.selection-container').show();});
   $("#start-game-button").on("click", () => {$(".body-container").show();$(".welcome-page").hide();});
   $('body').on('click','.back', handleCardClick);
-  $('#main-menu-button').on('click', () => {$('.body-container').hide();$('.welcome-page').show(); $("#start-game-button").hide();resetGame()});
-  $('.play-again').on('click', () => { $('.end-page').hide(); resetGame()});
+  $(".play-again, #main-menu-button").on("click", () => {$(".end-page, .selection-container, .body-container").hide();$(".welcome-page, .difficulty-select").show();resetGame();});
   $('#back-button').on('click', ()=>{$('.difficulty-select').show(); $('.selection-container').hide()})
 }
 
