@@ -11,14 +11,15 @@ var games_played = 0;
 var x;
 
 function initializeApp() {
-  $('#easy-button').on('click', () => {shuffleCards("easy"); $('#start-game-button').show();});
-  $('#medium-button').on('click', () => {shuffleCards("medium"); $('#start-game-button').show();});
-  $('#hard-button').on('click', () => {shuffleCards("hard");$('#start-game-button').show();});
+  $('#easy-button').on('click', () => {shuffleCards("easy"); $(".difficulty-select").hide();$('.selection-container').show();});
+  $('#medium-button').on('click', () => {shuffleCards("medium"); $('.difficulty-select').hide(); $('.selection-container').show();});
+  $('#hard-button').on('click', () => {shuffleCards("hard"); $(".difficulty-select").hide();$('.selection-container').show();});
   $("#start-game-button").on("click", () => {$(".body-container").show();$(".welcome-page").hide();});
   $('body').on('click','.back', handleCardClick);
-  $('#main-menu-button').on('click', () => {$('.body-container').hide();$('.welcome-page').show(); resetGame()});
+  $('#main-menu-button').on('click', () => {$('.body-container').hide();$('.welcome-page').show(); $("#start-game-button").hide();resetGame()});
   $('.close').on('click', () => { $('.modal').hide()});
   $('.playAgain').on('click', () => { $('.modal').hide(); resetGame()});
+  $('#back-button').on('click', ()=>{$('.difficulty-select').show(); $('.selection-container').hide()})
 }
 
 function handleCardClick(event) {
@@ -77,9 +78,9 @@ function calculateAccuracy() {
 
 function displayStats() {
   calculateAccuracy();
-  $('.stats-box:nth-child(5)').text(attempt);//attempt display
-  $('.stats-box:nth-child(7)').text(`${accuracy}%`);//accuracy display
-  $('.stats-box:nth-child(3)').text(games_played);//games_played display
+  $('.stats-box:nth-child(5)').text(attempt);
+  $('.stats-box:nth-child(7)').text(`${accuracy}%`);
+  $('.stats-box:nth-child(3)').text(games_played);
 }
 
 function showModal() {
