@@ -1,5 +1,3 @@
-# Galaxy Memory Match
-
 A JavaScript Memory Match Game Application with User-Determined Difficulty Levels, fits with all devices.
 
 > - Maintained by: `weilinh98`
