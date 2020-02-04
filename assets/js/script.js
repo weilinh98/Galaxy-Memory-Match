@@ -17,8 +17,7 @@ function initializeApp() {
   $("#start-game-button").on("click", () => {$(".body-container").show();$(".welcome-page").hide();});
   $('body').on('click','.back', handleCardClick);
   $('#main-menu-button').on('click', () => {$('.body-container').hide();$('.welcome-page').show(); $("#start-game-button").hide();resetGame()});
-  $('.close').on('click', () => { $('.modal').hide()});
-  $('.playAgain').on('click', () => { $('.modal').hide(); resetGame()});
+  $('.play-again').on('click', () => { $('.end-page').hide(); resetGame()});
   $('#back-button').on('click', ()=>{$('.difficulty-select').show(); $('.selection-container').hide()})
 }
 
@@ -48,7 +47,7 @@ function handleCardClick(event) {
       }
       else {
         games_played++;
-        showModal();
+        endGame();
         displayStats();
         firstCardClicked = null;
         secondCardClicked = null;
@@ -83,8 +82,9 @@ function displayStats() {
   $('.stats-box:nth-child(3)').text(games_played);
 }
 
-function showModal() {
-  $('.modal').show();
+function endGame() {
+  $('.body-container').hide();
+  $('.end-page').show();
 }
 
 function resetGame(){
@@ -109,10 +109,11 @@ function shuffleCards(difficulty) {
     while(easyCards.length){
       randomNumber = Math.floor(Math.random()*easyCards.length);
       randomCard = easyCards.splice(randomNumber,1);
-      $('.cards-container')
-      .append($('<div class = "cards">')
+      $(".cards-container")
+      .append($('<div class = "cards hvr-pulse">')
       .append($('<div class = "front">').addClass(randomCard))
-      .append($('<div class = "back">')));
+      .append($('<div class = "back">'))
+      );
       }
       break;
     case "medium":
@@ -122,10 +123,11 @@ function shuffleCards(difficulty) {
     while(mediumCards.length){
     randomNumber = Math.floor(Math.random() * mediumCards.length);
     randomCard = mediumCards.splice(randomNumber,1);
-    $('.cards-container')
-    .append($('<div class = "cards">')
+    $(".cards-container")
+    .append($('<div class = "cards hvr-pulse">')
     .append($('<div class = "front">').addClass(randomCard))
-    .append($('<div class = "back">')));
+    .append($('<div class = "back">'))
+    );
   }
       break;
     case "hard":
@@ -135,10 +137,11 @@ function shuffleCards(difficulty) {
     while (hardCards.length) {
     randomNumber = Math.floor(Math.random() * hardCards.length);
     randomCard = hardCards.splice(randomNumber, 1);
-    $('.cards-container')
-    .append($('<div class = "cards">')
+    $(".cards-container")
+    .append($('<div class = "cards hvr-pulse">')
     .append($('<div class = "front">').addClass(randomCard))
-    .append($('<div class = "back">')));
+    .append($('<div class = "back">'))
+    );
       }
       break;
   }
