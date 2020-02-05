@@ -34,32 +34,6 @@ body{
   font-size: 3rem;
 }
 
-.typewriter h1{
-  overflow: hidden;
-  border-right: .15em solid white;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation:
-  typing 3.5s steps(30, end),
-  blinking-cursor .5s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blinking-cursor {
-  from, to { border-color: transparent }
-  50% { border-color: silver; }
-}
-
-@keyframes blinker {
-  from {opacity: 1.0;}
-  to {opacity: 0.0;}
-}
-
 .blink{
   cursor: pointer;
 	text-decoration: blink;
@@ -85,7 +59,6 @@ body{
 .difficulty-select{
   width: 100%;
   height: 34%;
-  background: rgb(173, 164, 230,0.2);
   margin-top: 5%;
   border-top: 5px solid blue;
   border-bottom: 5px solid blue;
@@ -105,7 +78,6 @@ body{
   display: none;
   margin: auto;
   text-align: center;
-  background: rgb(173, 164, 230,0.2);
   border-top: 5px solid blue;
   border-bottom: 5px solid blue;
   box-shadow:
@@ -203,7 +175,7 @@ body{
 }
 aside.stats{
   height: 80%;
-  width: 30%;
+  width: 25%;
   margin: 3%;
   font-size: 20%;
   text-align: center;
@@ -234,7 +206,7 @@ main{
   margin: auto;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 97%;
 }
 .cards{
@@ -295,7 +267,7 @@ box-shadow: rgb(53, 55, 211) 0px 0px 20px 0px;
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  background-image: url("https://media3.giphy.com/media/JYVMtRL4fQaAg/source.gif");
+  background-image: url("/assets/stars/card-back.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -370,6 +342,7 @@ box-shadow: rgb(53, 55, 211) 0px 0px 20px 0px;
 }
 
 @media only screen and (max-width: 736px) {
+
   .welcome-title{
     font-size: 2rem;
   }
@@ -489,4 +462,3 @@ main{
   height: 30%;
 }
 }
-

@@ -1,3 +1,5 @@
+# Galaxy Memory Match
+
 A JavaScript Memory Match Game Application with User-Determined Difficulty Levels, fits with all devices.
 
 > - Maintained by: `weilinh98`
@@ -8,8 +10,10 @@ A JavaScript Memory Match Game Application with User-Determined Difficulty Level
  - CSS3, Flexbox
  - JavaScript, jQuery
 
-## Live Demo
+## Preview
+![GalaxyMemoryMatch](assets/stars/galaxy-memory-match.gif)
 
+## Live Demo
 Try this application live at https://galaxy-memory-match.weilin.dev
 
 ## Features
