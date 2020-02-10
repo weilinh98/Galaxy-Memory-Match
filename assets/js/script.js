@@ -27,7 +27,6 @@ function handleCardClick(event) {
 
   if (!firstCardClicked) {
     firstCardClicked = $(event.currentTarget);
-    console.log($(event.currentTarget).attr('class').split('')[3])
     firstCardClicked.addClass("hidden");
   }
   else {
@@ -145,4 +144,3 @@ function shuffleCards(difficulty) {
       break;
   }
 }
-
