@@ -38,6 +38,8 @@ function handleCardClick(event) {
     var secondImage = secondCardClicked.siblings().css("background-image");
     if (firstImage === secondImage) {
       matches++;
+      firstCardClicked.removeClass('cursor hvr-pulse');
+      secondCardClicked.removeClass("cursor hvr-pulse");
       if (matches !== max_matches) {
         displayStats();
         firstCardClicked = null;
@@ -107,10 +109,10 @@ function shuffleCards(difficulty) {
     while(easyCards.length){
       randomNumber = Math.floor(Math.random()*easyCards.length);
       randomCard = easyCards.splice(randomNumber,1);
-      $(".cards-container")
-      .append($('<div class = "cards hvr-pulse">')
-      .append($('<div class = "front">').addClass(randomCard))
-      .append($('<div class = "back">'))
+      $(".cards-container").append(
+        $('<div class = "cards">')
+          .append($('<div class = "front">').addClass(randomCard))
+          .append($('<div class = "back cursor hvr-pulse">'))
       );
       }
       break;
@@ -121,10 +123,10 @@ function shuffleCards(difficulty) {
     while(mediumCards.length){
     randomNumber = Math.floor(Math.random() * mediumCards.length);
     randomCard = mediumCards.splice(randomNumber,1);
-    $(".cards-container")
-    .append($('<div class = "cards hvr-pulse">')
-    .append($('<div class = "front">').addClass(randomCard))
-    .append($('<div class = "back">'))
+    $(".cards-container").append(
+      $('<div class = "cards cursor hvr-pulse">')
+        .append($('<div class = "front">').addClass(randomCard))
+        .append($('<div class = "back cursor hvr-pulse">'))
     );
   }
       break;
@@ -135,10 +137,10 @@ function shuffleCards(difficulty) {
     while (hardCards.length) {
     randomNumber = Math.floor(Math.random() * hardCards.length);
     randomCard = hardCards.splice(randomNumber, 1);
-    $(".cards-container")
-    .append($('<div class = "cards hvr-pulse">')
-    .append($('<div class = "front">').addClass(randomCard))
-    .append($('<div class = "back">'))
+    $(".cards-container").append(
+      $('<div class = "cards cursor hvr-pulse">')
+        .append($('<div class = "front">').addClass(randomCard))
+        .append($('<div class = "back cursor hvr-pulse">'))
     );
       }
       break;
