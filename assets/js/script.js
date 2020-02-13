@@ -28,18 +28,18 @@ function handleCardClick(event) {
   if (!firstCardClicked) {
     firstCardClicked = $(event.currentTarget);
     firstCardClicked.addClass("hidden");
+    firstCardClicked.parent().removeClass("cursor hvr-pulse");
   }
   else {
     secondCardClicked = $(event.currentTarget);
     secondCardClicked.addClass("hidden");
+    secondCardClicked.parent().removeClass("cursor hvr-pulse");
     attempt++;
     displayStats();
     var firstImage = firstCardClicked.siblings().css("background-image");
     var secondImage = secondCardClicked.siblings().css("background-image");
     if (firstImage === secondImage) {
       matches++;
-      firstCardClicked.removeClass('cursor hvr-pulse');
-      secondCardClicked.removeClass("cursor hvr-pulse");
       if (matches !== max_matches) {
         displayStats();
         firstCardClicked = null;
@@ -62,6 +62,8 @@ function handleCardClick(event) {
         firstCardClicked = null;
         secondCardClicked = null;
       }, 1000);
+      firstCardClicked.parent().addClass("cursor hvr-pulse");
+      secondCardClicked.parent().addClass("cursor hvr-pulse");
     }
 
   }
@@ -110,9 +112,9 @@ function shuffleCards(difficulty) {
       randomNumber = Math.floor(Math.random()*easyCards.length);
       randomCard = easyCards.splice(randomNumber,1);
       $(".cards-container").append(
-        $('<div class = "cards">')
+        $('<div class = "cards cursor hvr-pulse">')
           .append($('<div class = "front">').addClass(randomCard))
-          .append($('<div class = "back cursor hvr-pulse">'))
+          .append($('<div class = "back">'))
       );
       }
       break;
