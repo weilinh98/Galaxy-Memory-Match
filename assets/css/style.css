@@ -422,6 +422,7 @@ end-page :nth-child(1) {
 }
 }
 
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
@@ -446,8 +447,7 @@ end-page :nth-child(1) {
 
 }
 .body-container > header {
-    font-size: 4rem;
-    margin-bottom: 8%;
+    display: none;
 }
 
 .body-container{
@@ -456,15 +456,23 @@ end-page :nth-child(1) {
 
 .main-section{
   font-size: 6.7rem;
+  flex-direction: column;
+
+}
+
+aside.stats {
+  width: 55%;
+  height: 20%;
 }
 
 main{
   height: 80%;
 }
 .cards-container{
-  height: 56%;
+  height: 100%;
 }
 .cards{
-  height: 30%;
+  height: 19%;
+  width: 16%;
 }
 }
